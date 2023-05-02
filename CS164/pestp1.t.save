@@ -1,0 +1,19 @@
+var img1, button1
+fun init(){
+	img1 : makeimg()
+	setimg(img1, "relax_puppy.jpg")
+	html(.img1)
+	button1 : button("Click on it!", function)
+}
+fun function(){
+	setimg(img1, "happy_puppy.jpg")
+	html(.img1)
+	.button1 : button("kfjcvn", movietime)
+	
+
+}
+fun movietime(){
+	setimg(img1, "movietime_puppy.jpg")
+	html(.img1)
+}
+

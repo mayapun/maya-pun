@@ -1,0 +1,37 @@
+var x, y, vx, vy, g, EI, dx, dy, dvx, dvy, t 
+
+# x is the position of the shell in the air from the gun and y is the position of the shell in the air above the ground 
+# vx is the speed of the shell in the x-direction and vy is the speed of the shell in the y-direction
+# g is the acceleration due to gravity and EI is a constant
+#dx and dy are the new x and y respectively after 0.01 sec 
+#dvx is the new speed in the x- directio after 0.01 sec
+#dvy is the new speed in the y-direction after  0.01 sec 
+
+fun init(){
+	x : 0
+	y : 0
+	g : 9800
+	vx : iread("Please enter an integer as for the initial speed(in millimeter per second) of the shell in the x- direction")
+	vy : iread("Please enter an integer as for the inital speed(in millimeter per second) of the shell in the y-direction")
+	EI : iread("Please enter the inverse of the constant value for EI")
+	t : 0 
+	loop{
+		until .y < 0
+		dvx : .vx - (.vx / (100 * .EI))
+		dvy : .vy - (((.vy / .EI) + .g ) / 100)
+		dx : .x + (.vx / 100) 
+		dy : .y + (.vy / 100)
+		vx : .dvx
+		vy : .dvy
+		x : .dx 
+		y : .dy
+		t : .t + 1 
+		
+	}
+	t : .t / 100
+	sprint("The shell lands at a distance of about ")
+	iprint(.x)
+	sprint(" millimeters from the gun after ")
+	iprint(.t)
+	sprint("s")
+}

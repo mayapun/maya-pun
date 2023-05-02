@@ -1,0 +1,100 @@
+<html>
+<h1> Documentation </h1>
+<p> 
+<h2> Backstory</h2>
+My puppy is a virtual pet. Although he is virtual, he is like my late puppy. He is a foodie and 
+hates noise. He wants people's attention and sometimes gets angry if we ignore him. 
+The only thing that can make him happy when he's angry or sad is food. So you better feed him and give him attention. Besides, he is also emotional. Although he gets angry when you scold him, he will
+be sad if you scold continously. Overall, he is very cute. 
+</p>
+<h2> State Machine </h2>
+<p> 
+Given below is the state machine:
+</p>
+<div>
+<table>
+<tr>
+<th></th>
+<th> Happy </th>
+<th> Hungry </th>
+<th> Sleeping </th>
+<th> Angry </th>
+<th> Sad </th>
+</tr>
+<tr>
+<th> Scold </th>
+<td> Sad </td>
+<td> Sad </td>
+<td> Sleeping </td>
+<td> Angry </td>
+<td> Sad </td>
+</tr>
+<tr>
+<th> Feed </th>
+<td> Happy </td>
+<td> Happy </td>
+<td> Sleeping </td>
+<td> Happy </td>
+<td> Happy </td>
+</tr>
+<tr>
+<th> Noise </th>
+<td> Angry </td>
+<td> Angry </td>
+<td> Angry </td>
+<td> Angry </td>
+<td> Sad </td>
+</tr>
+<tr>
+<th> Pet </th>
+<td> Sleep </th>
+<td> Hungry </td>
+<td> Angry </td>
+<td> Happy </td>
+<td> Happy </td>
+</tr>
+</table>
+</div>
+<p>
+<h2> States </h2>
+My puppy has five distinct states. They are:<br>
+<p>
+<b>Happy</b>: This is the state where my puppy will be happy. He will be happy again if he is fed. But he will be 
+angry if there is any noise. Similarly, he will sleep if you pet.<br>
+</p><p>
+<b>Hungry</b>: This is the state where my puppy is hungry. He will be get
+ sad if scolded at this state, but he will be happy if he is fed. If you pet now, he will still be hungry.<br>
+</p><p>
+<b>Sleeping</b>: This is the state where my puppy will be sleeping. 
+He won't awake or change his state until there is noise. If there is noise, he will get angry. He also doesn't like when someone touches him while he is alseep. 
+</p><p>
+<b>Angry</b>: This is the state where my puppy will be angry. 
+If fed or pet, he will be happy. Else, he will just be angry.<br>
+</p><p>
+<b>Sad</b>: This is the state where my puppy will be sad. He will be happy when someone feeds or pets her. 
+</p>
+<h2> Events or stimuli </h2>
+<p>
+There are three events that change the given state of my pet. They are:<br>
+<b>Scold</b><br>
+<b>Feed</b><br>
+<b>Noise</b><br>
+<b>Pet</b><br>
+
+</p>
+<h2> Functionalities</h2>
+<p>
+In this project, I have used different features like setimg, makeimg, timer, stoptimer, setlabel, makelabel
+, button, buttonlabel, and html. At first, I created four different buttons for the stimuli and four unique functions that are executed when clicked on those buttons. Each function sees the state of the
+pet and changes the state accordingly along with the label under the pet as a short description.
+ For example, if the puppy is in a happy state and you click on the scold event,
+ the scold function will change the state of the puppy to sad along with a short label underneath.
+ And then, I have used timer function to fire the ti
+me in the beginning so that a timer function is executed when the specified time is collapsed. That timer function will change the state according to the
+ present state of the puppy. If any
+ button is clicked before the timer function is executed, the timer will 
+stop and a new timer will be set to track the time from the beginning.  
+
+</p>
+</html>
+
